@@ -1,0 +1,314 @@
+{
+  "info": {
+    "_postman_id": "0659b838-f82b-4dce-afa9-752ab6abdd07",
+    "name": "Skill Exchange Marketplace API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "57654649",
+    "_collection_link": "https://go.postman.co/collection/57654649-0659b838-f82b-4dce-afa9-752ab6abdd07?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU4MjY3OCwiZXhwIjoxNzg4NjY5MDc4fQ.xxyqFPee9cFeDca24ofwSvH9FxLlZhtPGvTjTX-XdooBbqI_3AZWa1RxVbMFMoPKE2SsuAamzb1TOhewRuz8Tg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Sweep Test User\",\r\n  \"email\": \"sweeptest99@gmail.com\",\r\n  \"password\": \"password123\",\r\n  \"branch\": \"CSE\",\r\n  \"year\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"testhash@gmail.com\",\r\n  \"password\": \"mypassword123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/users/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listing",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": 1,\r\n  \"title\": \"Guitar Lessons for Beginners\",\r\n  \"description\": \"Weekly 1-hour sessions covering chords and basic songs\",\r\n  \"category\": \"music\",\r\n  \"priceOrFree\": \"Free\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/listings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "listings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Listing",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Listing",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"listingId\": 1,\r\n  \"requesterId\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/requests",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "requests"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request accept",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/requests/9/accept",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "requests",
+            "9",
+            "accept"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request complete",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/requests/9/complete",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "requests",
+            "9",
+            "complete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Request rejected",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Submit review",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Rating",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/users/9/rating",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "9",
+            "rating"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete user",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0aGFzaEBnbWFpbC5jb20iLCJ1c2VySWQiOjMsImlhdCI6MTc4ODU5NDI1NiwiZXhwIjoxNzg4NjgwNjU2fQ.yHy5vslZ5PszKoxw_cVUy6b6DcF7saU-5IZoSe2mqAwJs2u11lf2_LJ6x-JIhI6AyqC1xU3Rx2Klp2PQUbPoyg",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/users/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "users",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
